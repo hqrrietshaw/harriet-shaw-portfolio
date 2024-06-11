@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Harriet Shaw - SuperHi</title>
+<link rel="shortcut icon" href="body.png" />
+
+<link href="_base.css" rel="stylesheet">
+<style>
+body {
+  background: linear-gradient(180deg, #ffc9de, #fdd97c, #fbfdaa, #c1f0b2, #b2e4f0, #d6b2f0);
+  background-size: 100% 500%;
+  animation: colorscroll 15s linear infinite;
+  font-family: Arial, sans-serif;
+}
+
+@keyframes colorscroll {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}
+
+h1 {
+  text-align: center;
+  margin: 0.3em;
+  line-height: 1.8em;
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+p {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 0 2.3em;
+  color: #545454;
+}
+
+section.feed {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+section.feed img {
+  padding: 10px;
+  width: 87%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+section.feed img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+footer a {
+  color: var(--nav-link);
+  text-decoration: none;
+  border-bottom: 0.1em solid var(--nav-underline);
+  transition: border-color 0.25s;
+  --text-color: #000011;
+  --nav-link: rgba(0, 0, 17, 0.6);
+  --nav-link-selected: rgba(0, 0, 17, 1);
+  --nav-underline: rgba(0, 0, 17, 0.1);
+  --nav-underline-hover: rgba(0, 0, 17, 1);
+  --timing: 0.25s;
+  --bezier: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+footer a:hover {
+  border-bottom: 0.1em solid;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url("bar.png");
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 8px;
+  text-decoration: none;
+}
+
+li a.active:hover {
+  background-image: url('hoverx.png');
+  background-size: 75%;
+    background-position: center;
+
+
+}
+/* Active button style */
+li a.active {
+  background-color: #ff5f57; /* Macintosh red button color */
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  text-indent: -9999px; /* Hides the text */
+  overflow: hidden; /* Ensures no overflow */
+  margin-top: 2px;
+  margin-left: 10px; /* Moves the button slightly to the right */
+
+
+}
+</style>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+      </ul>
+    <h1 style="text-align:center;">My <img src="superhi_logo.png" style="width:20%;"></h1>
+    <p style="text-align:center; font-size:0.8em;">I taught myself how to code over COVID, with the help of some SuperHi courses. I've learnt CSS, HTML, Javascript, React.js, D3, Shader, and right now I'm learning Python. Below are a few sites I've created on the courses.</p>
+    <nav></nav>
+</header>
+
+<section class="feed">
+    <a href="https://breaths-2.superhi.com"><img src="device---macbook-pro-4.png" class="superhi" alt="superhi"></a>
+    <a href="https://good-morning-2nd.superhi.com"><img src="device---macbook-pro-14.png" class="superhi" alt="superhi"></a>
+    <a href="https://plant-life-477.superhi.com"><img src="device---macbook-pro-10.png" class="superhi" alt="superhi"></a>
+    <a href="https://neon-nights-6.superhi.com"><img src="device---macbook-pro-1.png" class="superhi" alt="superhi"></a>
+    <a href="https://cryptoquartz-3.superhi.com"><img src="device---macbook-pro-11.png" class="superhi" alt="superhi"></a>
+    <a href="https://art-of-posing.superhi.com"><img src="device---macbook-pro-3.png" class="superhi" alt="superhi"></a>
+    <a href="https://cloth-studios-5.superhi.com"><img src="device---macbook-pro-12.png" class="superhi" alt="superhi"></a>
+    <a href="https://hi-records-6.superhi.com"><img src="device---macbook-pro-6.png" class="superhi" alt="superhi"></a>
+    <a href="https://arabella-9.superhi.com"><img src="device---macbook-pro-13.png" class="superhi" alt="superhi"></a>
+    <a href="https://4th-kind-box.superhi.com"><img src="device---macbook-pro-26.png" class="superhi" alt="superhi"></a>
+    <a href="https://alice-mccloud-8.superhi.com"><img src="device---macbook-pro-7.png" class="superhi" alt="superhi"></a>
+    <a href="https://portfolio-23.superhi.com"><img src="device---macbook-pro-9.png" class="superhi" alt="superhi"></a>
+    <a href="https://kale.superhi.com"><img src="device---macbook-pro-5.png" class="superhi" alt="superhi"></a>
+    <a href="https://wall-ball-148.superhi.com"><img src="device---macbook-pro-18.png" class="superhi" alt="superhi"></a>
+    <a href="https://rose-culver-560.superhi.com"><img src="device---macbook-pro-19.png" class="superhi" alt="superhi"></a>
+    <a href="https://out-of-office-45.superhi.com"><img src="device---macbook-pro-17.png" class="superhi" alt="superhi"></a>
+    <a href="https://dani-lewis-31.superhi.com"><img src="device---macbook-pro-16.png" class="superhi" alt="superhi"></a>
+    <a href="https://line-drawer-74.superhi.com"><img src="device---macbook-pro-21.png" class="superhi" alt="superhi"></a>
+    <a href="https://jellyfish-5.superhi.com"><img src="device---macbook-pro-15.png" class="superhi" alt="superhi"></a>
+    <a href="https://welcome-to-brutalust.superhi.com"><img src="device---macbook-pro-20.png" class="superhi" alt="superhi"></a>
+    <a href="https://home-planet-47.superhi.com"><img src="device---macbook-pro-23.png" class="superhi" alt="superhi"></a>
+    <a href="https://poly-cat-28.superhi.com"><img src="device---macbook-pro-22.png" class="superhi" alt="superhi"></a>
+    <a href="https://app.netlify.com/sites/phase3ally/overview"><img src="device---macbook-pro.png" class="superhi" alt="superhi"></a>
+    <a href="https://data-vis-week1.superhi.com"><img src="device---macbook-pro-2.png" class="superhi" alt="superhi"></a>
+</section>
+
+<footer>
+    <nav>
+        <a href="mailto:harrietshawbusiness@gmail.com">harrietshawbusiness@gmail.com</a>
+    </nav>
+</footer>
+</body>
+</html>

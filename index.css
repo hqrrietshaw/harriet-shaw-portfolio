@@ -1,0 +1,365 @@
+
+*, *:before {
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+h2 {
+  font-size: 1.1em;
+  color: black;
+  font-family: sans-serif;
+font-weight: 400;
+font-size: 12px;
+text-shadow: none;
+align-items: center;
+margin: 5px 25px ;
+}
+
+
+p.small {
+  color:black;
+  text-align: center;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid #888;
+}
+
+article {
+  position: absolute;
+  background: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: -8px 0 0 -8px;
+  box-shadow: 0 15px 16px rgba(0, 0, 0, 0.25);
+  filter: blur(0.1px);
+}
+
+article:before :before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  bottom: -20px;
+  background: inherit;
+  filter: blur(10px) saturate(2);
+}
+
+article.dragging:before {
+  filter: blur(10px) sepia(1) hue-rotate(200deg);
+}
+article.dragging .title1 {
+ background-image: url("bar.png");
+}
+.title1 {
+  text-align: center;
+  padding: 1px;
+
+  background-image: url("bar.png");
+  background-repeat: no-repeat;
+pointer-events: none;
+font-family: sans-serif;
+font-weight: 400;
+font-size: 10px;
+
+}
+article .title1:hover {
+      cursor: move;
+    }
+
+    article .content{
+      padding: 5px;
+      background: rgba(255, 255, 255, 0.66);
+    }
+
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 9999; /* Adjust the z-index value as needed */
+  left: 40%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 450px; /* Adjust max-width as needed */
+  height: 300px; /* Adjust max-height as needed */
+  overflow: auto;
+  background-color: rgba(255, 255, 255);
+border-radius: 5px;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;    }
+
+
+  /* Modal content */
+  .modal-content.title1 {
+    background: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: -8px 0 0 -8px;
+    box-shadow: 0 15px 16px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+   
+  
+  }
+
+  .modal-content:before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    bottom: -20px;
+    background: inherit;
+  }
+
+
+  .modal-content :hover {
+    cursor: move;
+  
+    
+    
+
+  }
+
+
+  .modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    
+  }
+
+  .modal .close:hover {
+    color: #000;
+    background-image: url('hoverx.png');
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+
+    
+  }
+
+
+  .stick-man {
+    position: absolute;
+    top: 50%;
+    left: 78%;
+}
+
+.stick-man .wrapper {
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+}
+
+.stick-man .head {
+    width: 130px;
+    height: 160px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 93px;
+    right: 535px;
+    z-index: 1;
+    transform-origin: center bottom;
+    background-image: url("face.png");    background-size: cover; /* Adjust background size as needed */
+background-repeat: no-repeat; /* Ensure image doesn't repeat */
+background-size: 100% 100%; /* Image will fill the entire head area */
+background-position: center; /* Center the background image */
+
+}
+
+@keyframes rock {
+    0% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.stick-man .torso {
+    width: 6px;
+    height: 65px;
+    border: 3px solid black;
+    display: block;
+    position: absolute;
+    top: 190px;
+    right: 595px;
+    background: rgb(0, 0, 0);
+    z-index: 1;
+
+}
+
+.stick-man .leftleg {
+    width: 6px;
+    height: 70px;
+    border: 3px solid black;
+    display: block;
+    position: absolute;
+    top: 255px;
+    right: 595px;
+    transform: rotate(12deg);
+    transform-origin: top;
+    background: rgb(0, 0, 0);
+
+}
+
+.stick-man .rightleg {
+    width: 6px;
+    height: 70px;
+    background: rgb(0, 0, 0);
+    border: 3px solid black;
+    display: block;
+    position: absolute;
+    top: 255px;
+    right: 595px;
+    transform: rotate(-12deg);
+    transform-origin: top;
+}
+
+.stick-man .leftarm {
+    width: 60px;
+    background: rgb(0, 0, 0);
+    height: 5px;
+    border: 3px solid black;
+    display: block;
+    position: absolute;
+    top: 205px;
+        right: 595px;
+    animation: wave 1s alternate infinite ease-in-out;
+    transform-origin: 100%;
+    border-radius: 10px;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(40deg);
+    }
+}
+
+.stick-man .rightarm {
+    width: 60px;
+    height: 5px;
+    border: 3px solid black;
+    background: rgb(0, 0, 0);
+    display: block;
+    position: absolute;
+    top: 205px;
+    right: 540px;
+    border-radius: 10px;
+    animation: wave2 1s alternate infinite ease-in-out;
+    transform-origin: 0%;
+}
+
+@keyframes wave2 {
+    0% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-40deg);
+    }
+}
+.speech-bubble {
+position: relative;
+right: 465px;
+padding: 20px;
+width: 350px; 
+max-width: 100%; 
+top: 60px;
+background-color: #ffffff;
+border: 2px solid #000000;
+border-radius: 80px; /* Reduced border-radius */
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+font-size: 12.5px;
+color: #ffffff;
+text-align: center;
+
+
+
+}
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#confirm-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+#confirm-button:hover {
+  background-color: #45a049;
+}
+
+#cancel-button {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+#cancel-button:hover {
+  background-color: #da190b;
+}
+
+#window-3{
+	display:none;
+
+}
+
+
+/* Style for each file item */
+.file-item {
+  margin-left: 5px; /* Move items slightly to the right */
+
+  padding: 10px;
+  display: inline-block; /* Displays items horizontally */
+  margin-right: 12px; /* Adjust margin between items */
+  border-bottom: none;
+  width: calc(50% - 80px); /* Set width for each item (20% - margin) */
+  max-width: 200px; /* Limit maximum width for larger screens */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  vertical-align: top; /* Align items to the top */
+}
+
+/* Style for file icon */
+.file-icon {
+  background-image: url('gif_icon.png');
+  background-size: cover;
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+}
+
+.file-icon1 {
+  background-image: url('gd.png');
+  background-size: cover;
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+}
+
+/* Style for file name */
+.file-name {
+  margin-top: 5px; /* Adjust spacing between icon and text */
+  font-size: 10px;
+}
+
